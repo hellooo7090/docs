@@ -1,0 +1,96 @@
+---
+title: "Cookie Configuration"
+description: "In this page you will learn what steps to take when setting up your cookie."
+icon: "cookie"
+---
+
+import { dashboardUrl } from "/snippets/custom-variables.mdx";
+
+<Warning>
+  You **must** be on a desktop/browser to get your ROBLOX cookie. You can
+  request a Corporate Member to get the cookie for you on the `Settings` tab.
+</Warning>
+
+<Note>
+  Due to ROBLOX Security Updates, you must be in the US (United States) to setup
+  your Cookie with Panora. You can also use a VPN and connect to a US (United
+  States) server!
+</Note>
+
+### Getting The Cookie
+
+To set up Panora with your Roblox account, you'll need to provide a Roblox account cookie. Follow these steps to obtain your Roblox cookie:
+
+Before attempting to get your cookie, please ensure that your bot account has joined your ROBLOX group and has been ranked with Ranking and Shoutting permissions!
+
+<Steps>
+  <Step title="Log In to Roblox">
+    Open an **Incognito** or **Private** window in your web browser, then go to the [Roblox website](https://www.roblox.com/).
+    Log in to your **Alternative Roblox Account** using your username and password.
+  </Step>
+
+<Step title="Open Developer Tools">
+  Once logged in, open the **Developer Tools** by right-clicking anywhere on the
+  page and selecting `Inspect`. Alternatively, press `Ctrl+Shift+I` (Windows) or
+  `Cmd+Option+I` (Mac).
+</Step>
+
+  <Step title="Navigate to the Application Tab">
+    In the **Developer Tools** panel, locate and click the `Application` tab.
+
+    *(If you don’t see the Application tab, click the `>>` icon to reveal more options.)*
+
+  </Step>
+
+<Step title="Locate Cookies">
+  In the left sidebar under **Storage**, expand the `Cookies` section. Select
+  `https://www.roblox.com` from the list of sites to view the site’s cookies.
+</Step>
+
+<Step title="Find the .ROBLOSECURITY Cookie">
+  Look through the list of cookies for one named `.ROBLOSECURITY`. Click on the
+  `.ROBLOSECURITY` cookie to display its value.
+</Step>
+
+<Step title="Copy the Cookie Value">
+  Double-click the **value** of the `.ROBLOSECURITY` cookie to highlight it.
+  Right-click and select `Copy`, or press `Ctrl+C` (Windows) or `Cmd+C` (Mac).
+</Step>
+
+<Step title="Keep Your Cookie Safe">
+  The cookie value you copied is sensitive information—keep it confidential and
+  do not share it with others.
+</Step>
+
+  <Step title="Use the Cookie in Panora Setup">
+    Paste the copied `.ROBLOSECURITY` cookie value into the appropriate field when configuring Panora, on the [Dashboard](https://app.panora.cc/).
+  </Step>
+</Steps>
+
+By following these steps, you'll be able to obtain and use your Roblox account cookie securely for setting up Panora. Remember to handle the cookie with care to ensure the security of your Roblox account.
+
+<Warning>
+  **NOTE:** Logging back into your Alternative ROBLOX Account will reset the
+  cookie, resulting in the bot not functioning properly!
+</Warning>
+
+## Account Cookie
+
+<CardGroup cols={1}>
+  <Card
+    title="Don't have a Workspace Setup?"
+    href="/workspace-docs/initial-setup"
+    icon="square-plus"
+    horizontal
+  >
+    Refer to our guide for detailed instructions!
+  </Card>
+</CardGroup>
+
+## Important Guidelines and Security Information
+
+1. **Permissions:** Ensure that roles provided during setup have the necessary permissions in both your Discord server and Roblox group, including permissions for managing members, roles, and channels as required by Panora.
+2. **Confidentiality:** The Roblox account cookie is sensitive information. Keep it confidential to maintain your account's security. Panora's team does not have access to this or any other information you enter into the bot.
+3. **Workspace Deletion:** To delete your workspace, navigate to the `Settings` tab in the sidebar, scroll down, and click on the `Delete Workspace` button. You will need to provide the Workspace ID. **This action is permanent and cannot be undone!**
+
+Adhering to these guidelines helps maintain the security and integrity of your Discord server and Roblox account while using Panora.

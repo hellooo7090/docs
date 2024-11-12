@@ -1,0 +1,135 @@
+---
+title: "Member Counter"
+description: "Learn how to set up and customize Panora's Member Counter to track your Roblox group."
+icon: "chart-line"
+---
+
+The Member Counter in Panora allows you to track your Roblox group’s member count and receive updates on your Discord server. This tool helps monitor growth, set goals, and engage with your community effectively.
+
+---
+
+## Setting Up the Member Counter
+
+<Steps>
+  <Step title="Open Your Workspace">
+    Visit the [Panora Dashboard](https://app.panora.cc/), log in, and select your workspace. From the sidebar, navigate to the `Member Counter` tab. *[See Initial Setup](/workspace-docs/initial-setup)*
+  </Step>
+
+  <Step title="Configure Member Counter Settings">
+    Customize the Member Counter settings, including goal parameters and message formats.
+  </Step>
+</Steps>
+
+---
+
+## Configuration Breakdown
+
+Configure the following fields to set up your Member Counter:
+
+<ResponseField name="Group ID" type="number" required>
+  Enter the **Group ID** of your Roblox group to enable tracking.
+
+  **Example:** `35005463`
+</ResponseField>
+
+<ResponseField name="Discord Channel" type="number" required>
+  Enter the **Channel ID** where member count messages will be posted.
+
+  **Example:** `group-count`
+</ResponseField>
+
+<ResponseField name="Goal" type="number" required>
+  Set the **Initial Member Goal** for the group to reach.
+
+  **Example:** `200` | **Default:** `100`
+</ResponseField>
+
+<ResponseField name="Increment" type="number" required>
+  Define the **Goal Increment** for each time the goal is achieved.
+
+  **Example:** `50` | **Default:** `50`
+</ResponseField>
+
+<ResponseField name="Embeds" type="boolean" required>
+  Toggle **Embeds** to enable or disable embedded messages.
+
+  **Default:** `true`
+</ResponseField>
+
+<ResponseField name="Gained Message" type="string" required>
+  Enter a **Message Template** for member gains.
+
+  **Example & Default:** Below
+</ResponseField>
+
+<ResponseField name="Lost Message" type="string" required>
+  Enter a **Message Template** for member losses.
+
+  **Example & Default:** Below
+</ResponseField>
+
+<ResponseField name="Goal Achieved Message" type="string" required>
+  Enter a **Message Template** for achieving goals.
+
+  **Example & Default:** Below
+</ResponseField>
+
+---
+
+## Custom Messages
+
+<CardGroup cols={1}>
+  <Card title="Personalize Member Count Messages">
+    <Tabs>
+      <Tab title="Placeholders">
+        Use these placeholders to customize your messages:
+
+        | Placeholder     | Description                                          |
+        |-----------------|------------------------------------------------------|
+        | `{group}`       | Roblox group name                                    |
+        | `{membercount}` | Current member count                                 |
+        | `{amount}`      | Number of members gained or lost                     |
+        | `{togo}`        | Members needed to reach the goal                     |
+        | `{goal}`        | Current member count goal                            |
+        | `{newgoal}`     | New goal after the previous goal is achieved         |
+        | `{s}`           | Adds "s" if `{amount}` is greater than one           |
+      </Tab>
+
+      <Tab title="Examples">
+        <Frame caption="Member Counter Example">
+          <img src="/images/memberCounterEx.png" />
+        </Frame>
+
+        - **Gained Message:**
+          ```
+          🌟 **{group}** has gained **{amount} new member{s}**! Just {togo} away from our goal of **{goal} members**.
+          ```
+
+        - **Lost Message:**
+          ```
+          😭 **{group}** has lost **{amount} member{s}**! We are {togo} away from our goal of **{goal} members**.
+          ```
+
+        - **Goal Achieved Message:**
+          ```
+          🎉 We have achieved our goal of **{goal} members**! The new goal is now **{newgoal} members**.
+          ```
+      </Tab>
+    </Tabs>
+  </Card>
+</CardGroup>
+
+---
+
+## Member Counter Logic
+
+### Goals and Updates
+- **Automatic Goal Adjustment:** When the member count meets or exceeds the goal, Panora increases the `{goal}` by the defined `{increment}` value (default: 50) and sends a goal achievement message.
+- **Embed Option:** Enable the `embed` setting to send updates in embed format for a polished presentation.
+- **Operations:** The Member Counter runs every minute to check the member count and send updates, if needed, to your Discord server.
+
+### Error Handling
+- If Panora encounters an issue with fetching the member count, it retries up to three times with a short delay, ensuring updates continue even if network issues occur.
+
+### Summary
+The Member Counter feature in Panora allows for seamless tracking of your Roblox group’s growth within your Discord community. Customize messages and goals to keep members engaged and informed about your group's progress.

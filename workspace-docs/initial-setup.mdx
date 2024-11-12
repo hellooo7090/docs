@@ -1,0 +1,86 @@
+---
+title: "Initial Setup"
+description: "In this page you will learn how to first setup with Panora."
+icon: "square-plus"
+---
+
+<Warning>
+  **NOTE:** The `/setup` and `/settings` command have been removed, all settings
+  and setup features are done through the [Dashboard](https://app.panora.cc/).
+</Warning>
+
+### Panora Workspace Setup
+
+<Steps>
+  <Step title="Invite Panora Bot to Your Server">
+    Invite Panora Bot to your Discord Server by clicking this [OAuth2 URL](https://discord.com/oauth2/authorize?client_id=1232928465913647134&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Fpanora.cc%2Fwelcome&scope=bot+identify).
+  </Step>
+
+<Step title="Create and Set Up Your Workspace">
+  Go to our [Dashboard](https://app.panora.cc/), log in, and click on "Create
+  Workspace." Select your Discord Server and Roblox Group, then confirm your
+  selections to complete the workspace setup.
+</Step>
+
+  <Step title="Configure Required Settings">
+    In the sidebar, navigate to the `Settings` tab to provide essential information for your workspace configuration:
+    
+    <Accordion title="Workspace Setup Information">
+      <ResponseField name="GroupID" type="number" required>
+        Enter the **Group ID** of your Roblox group. This allows the bot to access and manage group features.
+
+        **Example:** `35005463`
+      </ResponseField>
+
+      <ResponseField name="AccountCookie" type="string" required>
+        Provide the **Account Cookie** for an **Alternative** Roblox account. This account will be used by the bot for ranking and shout actions. **Ensure it has the necessary group permissions.**
+
+        **Example:** `_|WARNING:-DO-NOT-SHARE-THIS.--..`
+      </ResponseField>
+
+      <ResponseField name="RankingRole" type="number" required>
+        Specify the **Role ID** for users allowed to access ranking commands within the group.
+
+        **Example:** `Ranking Permissions`
+      </ResponseField>
+
+      <ResponseField name="ShoutingRole" type="number" required>
+        Specify the **Role ID** for users allowed to use the `/shout` command for group announcements.
+
+        **Example:** `Shout Permissions`
+      </ResponseField>
+
+      <ResponseField name="VerifiedRole" type="number" required>
+        Enter the **Role ID** for verified members within your group. This role will be assigned to users upon verification to signify their authenticated status.
+
+        **Example:** `Verified`
+      </ResponseField>
+
+      <ResponseField name="UnverifiedRole" type="number" required>
+        Enter the **Role ID** for unverified members within your group. This role distinguishes new or unauthenticated users until they complete verification.
+
+        **Example:** `Unverified`
+      </ResponseField>
+    </Accordion>
+
+  </Step>
+
+  <Step title="Save Your Configuration">
+    Be sure to click the `Save Changes` button at the bottom of the card to apply your settings.
+  </Step>
+</Steps>
+
+## Account Cookie
+<CardGroup cols={1}>
+  <Card title="Need Help Finding Your Account Cookie?" href="/workspace-docs/cookie-configuration" icon="cookie" horizontal>
+    Refer to our guide for detailed instructions!
+  </Card>
+</CardGroup>
+
+## Important Guidelines and Security Information
+
+1. **Permissions:** Ensure that roles provided during setup have the necessary permissions in both your Discord server and Roblox group, including permissions for managing members, roles, and channels as required by Panora.
+2. **Confidentiality:** The Roblox account cookie is sensitive information. Keep it confidential to maintain your account's security. Panora's team does not have access to this or any other information you enter into the bot.
+3. **Workspace Deletion:** To delete your workspace, navigate to the `Settings` tab in the sidebar, scroll down, and click on the `Delete Workspace` button. You will need to provide the Workspace ID. **This action is permanent and cannot be undone!**
+
+Adhering to these guidelines helps maintain the security and integrity of your Discord server and Roblox account while using Panora.

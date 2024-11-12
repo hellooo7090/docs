@@ -1,77 +1,86 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Panora",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/Panoraaaaaaa.png",
+    "light": "/logo/Panoraaaaaaa.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#0d6993",
+    "light": "#1e67fa",
+    "dark": "#0d6993",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#0d6993",
+      "to": "#1e67fa"
     }
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "https://discord.gg/2qsxZHfaTG"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://app.panora.cc/"
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "Workspaces",
+      "url": "workspace-docs"
+    },
+    {
+      "name": "Panora Admin",
       "url": "api-reference"
     }
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Terms of Service",
+      "icon": "scroll",
+      "url": "https://panora.cc/terms"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Privacy Policy",
+      "icon": "lock",
+      "url": "https://panora.cc/privacy"
     },
     {
-      "name": "Blog",
+      "name": "Main Site",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://panora.cc/"
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Overview",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
+        "rules",
+        "Partner-Benefits"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Pricing",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "pricing/free",
+        "pricing/elite"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Careers",
       "pages": [
-        "api-reference/introduction"
+        "careers/customer-support",
+        "careers/event-organizer"
+      ]
+    },
+    {
+      "group": "Workspace Documentations",
+      "pages": [
+        "workspace-docs/initial-setup",
+        "workspace-docs/cookie-configuration",
+        "workspace-docs/member-counter"
       ]
     },
     {
@@ -84,8 +93,7 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "x": "https://x.com/panorallc",
+    "discord": "https://discord.gg/2qsxZHfaTG"
   }
 }
