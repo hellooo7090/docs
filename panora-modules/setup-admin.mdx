@@ -4,11 +4,7 @@ description: "In this page you will learn how to setup Panora's Admin Module."
 icon: "user-group-crown"
 ---
 
-<video
-  controls
-  className="w-full aspect-video"
-  src="https://www.youtube.com/watch?v=DYIXyYVUwjg"
-></video>
+<video controls className="w-full aspect-video" src="https://www.youtube.com/watch?v=DYIXyYVUwjg" />
 
 ## Download Panora Admin Loader
 
@@ -18,11 +14,11 @@ icon: "user-group-crown"
   </Card>
 </CardGroup>
 
----
+***
 
 ## Copy & Paste Loader
 
-```lua
+```lua lua
 local PanoraModule = require(82434321168927) -- Don't Change
 
 PanoraModule.settings = {
@@ -61,6 +57,7 @@ PanoraModule.groupLevels = {
 <Steps activeStep={0}>
   <Step title="Install Panora Module">
     <p>In your Roblox game, add the Panora Admin Script to your project, naming it "PanoraAdmin". Use the following code to require the module:</p>
+
     ```lua
     local PanoraModule = require(82434321168927) -- Don't Change
     ```
@@ -68,6 +65,7 @@ PanoraModule.groupLevels = {
 
   <Step title="Configure Panora Settings">
     <p>Define the settings for the Panora Admin System according to your game's requirements. Customize the settings as needed:</p>
+
     ```lua
     PanoraModule.settings = {
         Prefix = ":", -- Change command prefix
@@ -86,6 +84,7 @@ PanoraModule.groupLevels = {
 
   <Step title="Define Admin Levels">
     <p>Specify the admin levels and their corresponding users. Add new admin users as needed:</p>
+
     ```lua
     PanoraModule.adminLevels = {
         ["owner123"] = "Owner", -- Add a new owner-level admin user
@@ -97,6 +96,7 @@ PanoraModule.groupLevels = {
 
   <Step title="Define Group Levels">
     <p>Define the group levels for players in your game. Replace the role IDs and names with your actual values:</p>
+
     ```lua
     PanoraModule.groupLevels = {
         [1] = "Guest", -- Replace with your actual role IDs and names
