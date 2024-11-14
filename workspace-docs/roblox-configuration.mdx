@@ -1,0 +1,84 @@
+---
+title: "Roblox Configuration"
+description: "Learn how to set up Roblox features and manage roles and binds in your Discord server."
+icon: "bolt"
+---
+
+This guide will walk you through the process of setting up roles and binds for your Roblox group within your Discord server. It covers commands and configurations related to managing your Roblox roles and synchronizing them with Discord.
+
+---
+
+## Setting Up Roles and Binds
+
+Properly setting up roles and binds ensures that your Roblox group roles are linked with Discord roles, enabling synchronized role management across platforms and seamless group interactions.
+
+### **Command: `/setup_group_roles`**
+
+This command fetches all roles from your Roblox group and automatically creates the corresponding roles in your Discord server.
+
+#### Example usage:
+
+```bash
+/setup_group_roles
+```
+
+### **Command: `/bind`** (Moved to Dashboard)
+
+**Note:** Role binds are now configured through the dashboard. 
+
+Previously, this command linked specific Roblox roles to Discord roles. To remove a bind, simply click the trash can icon next to the desired bind.
+
+- **Roblox Role Name:** The Roblox role you wish to link.
+- **Discord Role(s):** The Discord role(s) you want to associate with the Roblox role.
+
+#### Example usage:
+
+Using the select menu:
+
+```bash
+Roblox Role: Employees
+
+Discord Role: Staff, Support Staff
+```
+
+### **Command: `/viewbinds`**
+
+The `/viewbinds` command allows you to view the current links between Roblox roles and Discord roles.
+
+#### Example usage:
+
+```bash
+/viewbinds
+```
+
+---
+
+## Additional Commands
+
+- **`/verify`**: Connect your Roblox and Discord accounts.
+- **`/reverify`**: Change your connected Roblox account.
+- **`/getRoles`**: Fetch, display, and receive your roles from the connected Roblox group. ([Required: Group](initial-setup/))
+- **`/demote`**: Demote a user in the connected Roblox group. ([Required: Group & Cookie](initial-setup/))
+- **`/promote`**: Promote a user in the connected Roblox group. ([Required: Group & Cookie](initial-setup/))
+- **`/shout`**: Send a shout message in the connected Roblox group. ([Required: Group & Cookie](initial-setup/))
+
+---
+
+## Using the Dashboard
+
+For an easier and more user-friendly setup, use the dashboard to manage roles and binds:
+
+1. **Access the Dashboard**: Log in with your Discord account to access the dashboard.
+2. **Select Your Server**: Choose the Discord server you want to configure.
+3. **Configure Roles**: Use the interface to add, remove, or update your roles and binds.
+4. **Save Changes**: Ensure all changes are saved and synced with your Discord server.
+
+---
+
+## Important Guidelines and Security Information
+
+1. **Permissions:** Ensure that roles provided during setup have the necessary permissions in both your Discord server and Roblox group, including permissions for managing members, roles, and channels as required by Panora.
+2. **Confidentiality:** The Roblox account cookie is sensitive information. Keep it confidential to maintain your account's security. Panora's team does not have access to this or any other information you enter into the bot.
+3. **Workspace Deletion:** To delete your workspace, navigate to the `Settings` tab in the sidebar, scroll down, and click on the `Delete Workspace` button. You will need to provide the Workspace ID. **This action is permanent and cannot be undone!**
+
+Adhering to these guidelines helps maintain the security and integrity of your Discord server and Roblox account while using Panora.

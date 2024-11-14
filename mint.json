@@ -31,8 +31,8 @@
       "url": "workspace-docs"
     },
     {
-      "name": "Panora Admin",
-      "url": "api-reference"
+      "name": "Panora Modules",
+      "url": "panora-modules"
     }
   ],
   "anchors": [
@@ -55,40 +55,35 @@
   "navigation": [
     {
       "group": "Overview",
-      "pages": [
-        "introduction",
-        "rules",
-        "Partner-Benefits"
-      ]
+      "pages": ["introduction", "rules", "Partner-Benefits"]
     },
     {
       "group": "Pricing",
-      "pages": [
-        "pricing/free",
-        "pricing/elite"
-      ]
+      "pages": ["pricing/free", "pricing/elite"]
     },
     {
       "group": "Careers",
-      "pages": [
-        "careers/customer-support",
-        "careers/event-organizer"
-      ]
+      "pages": ["careers/customer-support", "careers/event-organizer"]
     },
     {
       "group": "Workspace Documentations",
       "pages": [
         "workspace-docs/initial-setup",
         "workspace-docs/cookie-configuration",
-        "workspace-docs/member-counter"
+        "workspace-docs/member-counter",
+        "workspace-docs/roblox-configuration"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Panora Admin",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "panora-modules/setup-admin"
+      ]
+    },
+    {
+      "group": "Panora API",
+      "pages": [
+        "panora-modules/setup-api"
       ]
     }
   ],
