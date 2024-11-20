@@ -4,4 +4,73 @@ description: "In this page you will learn how to setup Panora's API Module."
 icon: "code-pull-request-closed"
 ---
 
-<Warning>NOT SETUP MADE YET</Warning>
+## Copy & Paste Loader
+
+```lua lua
+local PanoraModule = require(17686994997) -- Don't Change
+
+local panoraInstance = Panora.init("WORKSPACEID", {
+    GroupId = 123456789, -- Replace with your group ID
+    Commands = {
+        Enabled = true, -- Set to false to disable ranking commands
+        MinRank = 1, -- Minimum rank required to use ranking commands
+        Prefix = ":", -- Prefix for ranking commands
+    },
+    Interface = {
+        Enabled = true, -- Set to false to disable the Panora ranking interface
+        MinRank = 1, -- Minimum rank required to access the Panora ranking interface
+    },
+    Activity = {
+        Enabled = true, -- Set to false to disable tracking
+        MinRank = 1, -- Minimum rank required to be tracked
+        Leaderstats = true, -- Set to false to disable leaderstats
+        Webhook = true, -- Set to false to disable the webhook
+    },
+})
+```
+
+## Setup Steps
+
+<Steps activeStep={0}>
+  <Step title="Install Panora Module">
+    <p>In your Roblox game, add the Panora API Script to your project, naming it "PanoraAPI". Use the following code to require the module:</p>
+
+    ```lua
+    local PanoraModule = require(17686994997) -- Don't Change
+    ```
+
+  </Step>
+
+  <Step title="Configure Panora Settings">
+    <p>Define the settings for the Panora API System according to your game's requirements. Customize the settings as needed:</p>
+
+    ```lua
+    local panoraInstance = Panora.init("WORKSPACEID", {
+        GroupId = 123456789, -- Replace with your group ID
+        Commands = {
+            Enabled = true, -- Set to false to disable ranking commands
+            MinRank = 1, -- Minimum rank required to use ranking commands
+            Prefix = ":", -- Prefix for ranking commands
+        },
+        Interface = {
+            Enabled = true, -- Set to false to disable the Panora ranking interface
+            MinRank = 1, -- Minimum rank required to access the Panora ranking interface
+        },
+        Activity = {
+            Enabled = true, -- Set to false to disable tracking
+            MinRank = 1, -- Minimum rank required to be tracked
+            Leaderstats = true, -- Set to false to disable leaderstats
+            Webhook = true, -- Set to false to disable the webhook
+        },
+    })
+    ```
+
+  </Step>
+
+</Steps>
+
+## Conclusion
+
+By following these steps and customizing the settings according to your game's requirements, you can successfully set up the Panora Admin System for your Roblox game.
+
+If you have any questions, comments, or concerns, please contact [Support](https://discord.com/invite/s7VhTPQ32b)!

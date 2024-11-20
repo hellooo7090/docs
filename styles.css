@@ -1,0 +1,46 @@
+/* styles.css */
+
+/* Wrapper for the download link */
+.download-link-wrapper {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  space-between: 0.75rem;
+}
+
+/* Icon container */
+.download-link-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #1a1a1b; /* Dark gray */
+  mask-image: url("https://mintlify.b-cdn.net/v6.6.0/regular/download.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text section */
+.download-link-text-wrapper {
+  margin-left: 0.75rem;
+}
+
+/* Title text (optional) */
+.download-link-title {
+  font-weight: 600; /* Bold */
+  font-size: 1rem; /* Base size */
+  color: #1f2937; /* Dark gray */
+}
+
+/* Description text */
+.download-link-description {
+  font-weight: 400; /* Normal weight */
+  font-size: 0.875rem; /* Small size */
+  color: #4b5563; /* Medium gray */
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}

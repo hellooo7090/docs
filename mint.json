@@ -33,6 +33,10 @@
     {
       "name": "Panora Modules",
       "url": "panora-modules"
+    },
+    {
+      "name": "Need Help?",
+      "url": "help-docs"
     }
   ],
   "anchors": [
@@ -76,15 +80,19 @@
     },
     {
       "group": "Panora Admin",
-      "pages": [
-        "panora-modules/setup-admin"
-      ]
+      "pages": ["panora-modules/setup-admin"]
     },
     {
       "group": "Panora API",
-      "pages": [
-        "panora-modules/setup-api"
-      ]
+      "pages": ["panora-modules/setup-api"]
+    },
+    {
+      "group": "Tutorials",
+      "pages": ["help-docs/creating-a-workspace", "help-docs/buying-elite"]
+    },
+    {
+      "group": "Common Issues",
+      "pages": ["help-docs/common-issues"]
     }
   ],
   "footerSocials": {
