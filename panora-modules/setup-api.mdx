@@ -6,14 +6,14 @@ icon: "code-pull-request-closed"
 
 ## Copy & Paste Loader
 
-```lua lua
+```lua
 local PanoraModule = require(17686994997) -- Don't Change
 
-local panoraInstance = Panora.init("WORKSPACEID", {
+local panoraInstance = PanoraModule.init("WORKSPACEID", {
     GroupId = 123456789, -- Replace with your group ID
     Commands = {
         Enabled = true, -- Set to false to disable ranking commands
-        MinRank = 1, -- Minimum rank required to use ranking commands
+        MinRank = 120, -- Minimum rank required to use ranking commands
         Prefix = ":", -- Prefix for ranking commands
     },
     Interface = {
@@ -22,7 +22,7 @@ local panoraInstance = Panora.init("WORKSPACEID", {
     },
     Activity = {
         Enabled = true, -- Set to false to disable tracking
-        MinRank = 1, -- Minimum rank required to be tracked
+        MinRank = 120, -- Minimum rank required to be tracked
         Leaderstats = true, -- Set to false to disable leaderstats
         Webhook = true, -- Set to false to disable the webhook
     },
