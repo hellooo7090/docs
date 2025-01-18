@@ -24,7 +24,8 @@ local panoraInstance = PanoraModule.init("WORKSPACEID", {
         Enabled = true, -- Set to false to disable tracking
         MinRank = 120, -- Minimum rank required to be tracked
         Leaderstats = true, -- Set to false to disable leaderstats
-        Webhook = true, -- Set to false to disable the webhook
+        Webhook = true, -- Set to false to disable join/leave logs
+        webhookUrl = 'WEBHOOKURL', -- Replace with your Discord webhook URL
     },
 })
 ```
@@ -60,7 +61,8 @@ local panoraInstance = PanoraModule.init("WORKSPACEID", {
             Enabled = true, -- Set to false to disable tracking
             MinRank = 1, -- Minimum rank required to be tracked
             Leaderstats = true, -- Set to false to disable leaderstats
-            Webhook = true, -- Set to false to disable the webhook
+            Webhook = true, -- Set to false to disable join/leave logs
+            webhookUrl = 'WEBHOOKURL', -- Replace with your Discord webhook URL
         },
     })
     ```
