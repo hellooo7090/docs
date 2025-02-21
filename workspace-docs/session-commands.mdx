@@ -1,0 +1,141 @@
+---
+title: "Session Commands"
+description: "Learn how to create and customize Panora's Session Command Module."
+icon: "text-size"
+---
+
+The Session Commands Module in Panora allows you to manage and track sessions within your Discord server. It enables structured session announcements, role-based access control, and automated formatting for a streamlined experience.
+
+---
+
+## Setting Up the Member Counter
+
+<Steps>
+  <Step title="Open Your Workspace">
+    Visit the [Panora Dashboard](https://app.panora.cc/), log in, and select your workspace. From the sidebar, navigate to the `Sessions` tab. *[See Initial Setup](/workspace-docs/initial-setup)*
+  </Step>
+
+  <Step title="Create a New Session">
+    Click **Create Session** and fill in the required details, such as the session name and description.  
+  </Step>
+    <Step title="Configure Session Settings">  
+    Customize your session settings, including announcement channels, embed options, and message formatting.  
+  </Step>
+</Steps>
+
+---
+
+## Configuration Breakdown
+
+Configure the following fields to set up your Member Counter:
+
+<ResponseField name="Session Name" type="string" required>
+  The **name** of the session that will be used for command activation.
+
+**Example:** `training`
+
+</ResponseField>
+
+<ResponseField name="Description" type="string" required>
+  The **message template** used when announcing the session. Supports placeholders.
+
+**Example:** `Welcome to {server}! The session starts in {channel}.`
+
+</ResponseField>
+
+<ResponseField name="Allowed Roles" type="array" optional>
+  A list of **Role IDs** that can execute the session command.
+
+**Example:** `@Executive, @Management` | **Default:** `@everyone`
+
+</ResponseField>
+
+<ResponseField name="Channel ID" type="number" optional>
+  The **Discord Channel ID** where the session announcement will be posted.
+
+**Example:** `#sessions` | **Default:** Sends in channel of ran.
+
+</ResponseField>
+
+<ResponseField name="Embed" type="boolean" required>
+  Toggle **Embeds** to enable or disable embedded messages for session announcements.
+
+**Default:** `true`
+
+</ResponseField>
+
+<ResponseField name="Ping" type="string" optional>
+  Defines **who should be pinged** when the session is announced.
+
+**Example:** `@Sessions`
+
+</ResponseField>
+
+## Custom Messages
+
+<CardGroup cols={1}>
+  <Card title="Personalize Session Messages">
+    <Tabs>
+      <Tab title="Variables">
+        Use these Variables to customize your session messages:
+        <br />
+        | Variables     | Description                                    |
+        |---------------|------------------------------------------------|
+        | `{user}`      | Mentions the user executing the command        |
+        | `{avatar}`    | Displays the user’s avatar URL                 |
+        | `{username}`  | Displays the user’s username                   |
+        | `{server}`    | Displays the server name                       |
+        | `{channel}`   | Mentions the current channel                   |
+        | `{&role}`     | Dynamically mentions a role                    |
+        | `{#channel}`  | Dynamically mentions a channel                 |
+        | `{everyone}`  | Mentions `@everyone`                           |
+        | `{here}`      | Mentions `@here`                               |
+      </Tab>
+
+      <Tab title="Arguments">
+        You can use **Arguments** to reference specific inputs provided when running a command. These placeholders allow you to dynamically insert user-provided values into messages.
+        <br />
+        To use them, simply include `{args#}` in your command's description. This can be done as many times as needed to structure responses dynamically.
+        <br />
+        Check the **Examples** tab for more details on how arguments work in practice!
+      </Tab>
+
+      <Tab title="Examples">
+        - **Training Announcement:**
+        <br />
+        <Frame caption="Session Announcement Example">
+          <img src="/images/sessionExample.png" />
+        </Frame>
+
+          ```
+          We're excited to announce that there is currently a training, hosted by our wonderful management member {user}. We warmly invite you to join us and obtain a Staff Rank!
+
+          [-] Session Host: {user}
+          [-] Session Co-Host: {args1}
+          [-] Server Number: {args2}
+
+          Signed,
+          {user}
+          Panora Talent Team
+          ```
+      </Tab>
+    </Tabs>
+
+  </Card>
+</CardGroup>
+
+---
+
+## Session Logic  
+
+### Execution & Permissions  
+- **Role-Based Access:** Only users with the assigned **Allowed Roles** can execute session commands.  
+- **Channel Targeting:** Messages are sent to the **configured channel**, ensuring proper visibility.  
+- **Embed Customization:** If enabled, announcements will use an embed layout for better presentation.  
+
+### Error Handling  
+- If a session command is triggered with an invalid configuration, Panora notifies the user with an error message.  
+- If an issue occurs with fetching roles, channels, or user details, the system retries up to three times before failing gracefully.  
+
+### Summary  
+The **Session Commands Module** in Panora streamlines the process of scheduling and managing sessions within your Discord server. Customize placeholders, control access, and ensure smooth communication for all session-related activities. 

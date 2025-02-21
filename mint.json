@@ -75,7 +75,8 @@
         "workspace-docs/initial-setup",
         "workspace-docs/cookie-configuration",
         "workspace-docs/member-counter",
-        "workspace-docs/roblox-configuration"
+        "workspace-docs/roblox-configuration",
+        "workspace-docs/session-commands"
       ]
     },
     {
