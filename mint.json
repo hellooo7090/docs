@@ -80,10 +80,6 @@
       ]
     },
     {
-      "group": "Panora Admin",
-      "pages": ["panora-modules/setup-admin"]
-    },
-    {
       "group": "Panora API",
       "pages": ["panora-modules/setup-api"]
     },
