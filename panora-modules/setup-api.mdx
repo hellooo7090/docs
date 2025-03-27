@@ -9,7 +9,7 @@ icon: "code-pull-request-closed"
 ```lua
 local PanoraModule = require(17686994997) -- Don't Change
 
-local panoraInstance = PanoraModule.init("WORKSPACEID", {
+local panoraInstance = Panora.init("WORKSPACEID", {
     GroupId = 123456789, -- Replace with your group ID
     Commands = {
         Enabled = true, -- Set to false to disable ranking commands
@@ -17,15 +17,19 @@ local panoraInstance = PanoraModule.init("WORKSPACEID", {
         Prefix = ":", -- Prefix for ranking commands
     },
     Interface = {
-        Enabled = true, -- Set to false to disable the Panora ranking interface
-        MinRank = 1, -- Minimum rank required to access the Panora ranking interface
+        Enabled = true, -- Set to false to disable the Panora Ranking Interface
+        MinRank = 120, -- Minimum rank required to access the Panora Ranking Interface
+    },
+    RankingLogs = {
+        Enabled = false, -- Set to false to disable the Panora In-Game Ranking Logs
+        webhookUrl = '' -- Replace with Webhook URL (Format: "https://discord.com/api/webhooks/id/token")
     },
     Activity = {
         Enabled = true, -- Set to false to disable tracking
         MinRank = 120, -- Minimum rank required to be tracked
-        Leaderstats = true, -- Set to false to disable leaderstats
-        Webhook = true, -- Set to false to disable join/leave logs
-        webhookUrl = 'WEBHOOKURL', -- Replace with your Discord webhook URL
+        Leaderstats = false, -- Set to false to disable leaderstats
+        Webhook = true, -- Set to false to disable join/leave logs 
+        webhookUrl = 'https://discord.com/api/webhooks/id/token', -- Replace with Webhook URL (Format: "https://discord.com/api/webhooks/id/token")
     },
 })
 ```
@@ -57,12 +61,16 @@ local panoraInstance = PanoraModule.init("WORKSPACEID", {
             Enabled = true, -- Set to false to disable the Panora ranking interface
             MinRank = 1, -- Minimum rank required to access the Panora ranking interface
         },
+        RankingLogs = {
+        Enabled = false, -- Set to true to enable the Panora In-Game Ranking Logs
+        webhookUrl = '' -- Replace with Webhook URL (Format: "https://discord.com/api/webhooks/id/token")
+        },
         Activity = {
             Enabled = true, -- Set to false to disable tracking
             MinRank = 1, -- Minimum rank required to be tracked
             Leaderstats = true, -- Set to false to disable leaderstats
             Webhook = true, -- Set to false to disable join/leave logs
-            webhookUrl = 'WEBHOOKURL', -- Replace with your Discord webhook URL
+            webhookUrl = 'https://discord.com/api/webhooks/id/token', -- Replace with your Discord webhook URL
         },
     })
     ```
