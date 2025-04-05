@@ -9,7 +9,7 @@ icon: "code-pull-request-closed"
 ```lua
 local PanoraModule = require(17686994997) -- Don't Change
 
-local panoraInstance = Panora.init("WORKSPACEID", {
+local panoraInstance = PanoraModule.init("WORKSPACEID", {
     GroupId = 123456789, -- Replace with your group ID
     Commands = {
         Enabled = true, -- Set to false to disable ranking commands
@@ -50,7 +50,7 @@ local panoraInstance = Panora.init("WORKSPACEID", {
     <p>Define the settings for the Panora API System according to your game's requirements. Customize the settings as needed:</p>
 
     ```lua
-    local panoraInstance = Panora.init("WORKSPACEID", {
+    local panoraInstance = PanoraModule.init("WORKSPACEID", {
         GroupId = 123456789, -- Replace with your group ID
         Commands = {
             Enabled = true, -- Set to false to disable ranking commands
